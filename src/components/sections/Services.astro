@@ -1,0 +1,28 @@
+---
+import { services } from '../../data/services';
+
+const {
+  eyebrow = 'Services',
+  headline = '[Main services headline]',
+  intro = '[Brief intro explaining the company’s core service areas and what customers can expect.]',
+} = Astro.props;
+---
+
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-intro">
+      <p class="eyebrow">{eyebrow}</p>
+      <h2>{headline}</h2>
+      <p>{intro}</p>
+    </div>
+
+    <div class="card-grid">
+      {services.map((service) => (
+        <article class="card">
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

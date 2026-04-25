@@ -1,0 +1,26 @@
+---
+import { valuePoints } from '../../data/valuePoints';
+
+const {
+  eyebrow = 'Why Choose Us',
+  headline = '[Simple proof/value headline]',
+} = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-intro">
+      <p class="eyebrow">{eyebrow}</p>
+      <h2>{headline}</h2>
+    </div>
+
+    <div class="card-grid">
+      {valuePoints.map((point) => (
+        <article class="card">
+          <h3>{point.title}</h3>
+          <p>{point.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

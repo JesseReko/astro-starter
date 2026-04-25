@@ -1,0 +1,18 @@
+---
+import { site } from '../../config/site';
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>{site.name}</strong>
+      <p>{site.tagline}</p>
+    </div>
+
+    <div class="footer-contact">
+      <p><a href={site.phoneHref}>{site.phone}</a></p>
+      <p><a href={site.emailHref}>{site.email}</a></p>
+      <p>{site.serviceArea}</p>
+    </div>
+  </div>
+</footer>

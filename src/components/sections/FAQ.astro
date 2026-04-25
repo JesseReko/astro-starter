@@ -1,0 +1,15 @@
+---
+import { faqs } from '../../data/faqs';
+---
+
+<section class="section light">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    {faqs.map(faq => (
+      <div class="card">
+        <h3>{faq.question}</h3>
+        <p>{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+</section>

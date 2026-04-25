@@ -1,0 +1,19 @@
+---
+import { site } from '../../config/site';
+import { nav } from '../../data/navigation';
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label={`${site.name} home`}>
+      <div class="logo-mark">{site.logoText}</div>
+      <span>{site.name}</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      {nav.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>

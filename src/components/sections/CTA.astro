@@ -1,0 +1,23 @@
+---
+import { site } from '../../config/site';
+
+const {
+  eyebrow = 'Contact',
+  headline = '[Call-to-action headline]',
+  text = '[Short contact message telling visitors what to do next and what information to send.]',
+} = Astro.props;
+---
+
+<section id="contact" class="section light">
+  <div class="container">
+    <div class="contact-panel">
+      <p class="eyebrow">{eyebrow}</p>
+      <h2>{headline}</h2>
+      <p>{text}</p>
+      <div class="button-row">
+        <a class="button" href={site.emailHref}>Email Us</a>
+        <a class="button secondary" href={site.phoneHref}>Call {site.phone}</a>
+      </div>
+    </div>
+  </div>
+</section>

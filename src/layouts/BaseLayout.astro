@@ -1,0 +1,25 @@
+---
+import Header from '../components/ui/Header.astro';
+import Footer from '../components/ui/Footer.astro';
+import SEO from '../components/ui/SEO.astro';
+import { site } from '../config/site';
+import '../styles/global.css';
+
+const {
+  title = site.metaTitle,
+  description = site.metaDescription,
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <SEO title={title} description={description} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

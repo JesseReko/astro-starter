@@ -1,0 +1,26 @@
+---
+import { site } from '../../config/site';
+
+const {
+  eyebrow = `${site.primaryService} | ${site.serviceArea}`,
+  headline = '[Clear headline about what the company does]',
+  text = '[Short value statement explaining who the company helps, what problem they solve, and why customers should trust them.]',
+  imageLabel = '[Hero Image Placeholder]',
+} = Astro.props;
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{headline}</h1>
+      <p class="lead">{text}</p>
+      <div class="button-row">
+        <a class="button" href="/contact">Request a Quote</a>
+        <a class="button secondary" href="/services">View Services</a>
+      </div>
+    </div>
+
+    <div class="image-placeholder">{imageLabel}</div>
+  </div>
+</section>

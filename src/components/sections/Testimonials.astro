@@ -1,0 +1,17 @@
+---
+import { testimonials } from '../../data/testimonials';
+---
+
+<section class="section">
+  <div class="container">
+    <h2>What Customers Say</h2>
+    <div class="card-grid">
+      {testimonials.map(t => (
+        <div class="card">
+          <p>"{t.text}"</p>
+          <strong>- {t.name}</strong>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

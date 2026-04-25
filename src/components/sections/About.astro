@@ -1,0 +1,21 @@
+---
+const {
+  eyebrow = 'About',
+  headline = '[Trust-building company headline]',
+  textOne = '[Brief company background. Mention experience, service area, reliability, process, or anything that builds credibility.]',
+  textTwo = '[Second paragraph with a practical customer-focused angle: communication, timelines, quality, or project expectations.]',
+  imageLabel = '[About / Team / Work Image Placeholder]',
+} = Astro.props;
+---
+
+<section id="about" class="section light">
+  <div class="container split-grid">
+    <div class="placeholder-box">{imageLabel}</div>
+    <div>
+      <p class="eyebrow">{eyebrow}</p>
+      <h2>{headline}</h2>
+      <p>{textOne}</p>
+      <p>{textTwo}</p>
+    </div>
+  </div>
+</section>
