@@ -2,6 +2,14 @@
 
 Reusable Astro starter for small business websites.
 
+## Quick Start
+
+```bash
+npx degit JesseReko/astro-starter my-site
+cd my-site
+npm install
+npm run dev
+
 ## Edit client info
 Update:
 
