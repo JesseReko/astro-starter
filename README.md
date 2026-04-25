@@ -9,6 +9,7 @@ npx degit JesseReko/astro-starter my-site
 cd my-site
 npm install
 npm run dev
+```
 
 ## Edit client info
 Update:
